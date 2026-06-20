@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&#23665;&#19996;&#38599;&#20027;&#36131;&#20219;&#38505;&#25253;&#20215;&#24037;&#20855;</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <h1>&#23665;&#19996;&#38599;&#20027;&#36131;&#20219;&#38505;&#25253;&#20215;&#24037;&#20855;</h1>
+        <p>&#23665;&#19996;&#30465;&#65288;&#19981;&#21547;&#38738;&#23707;&#22320;&#21306;&#65289;&#38599;&#20027;&#36131;&#20219;&#20445;&#38505;&#65288;2026&#65289;&#21021;&#27493;&#25253;&#20215;</p>
+      </div>
+      <div class="header-actions">
+        <button class="ghost-button" id="loadSampleButton" type="button">&#22635;&#20837;&#31034;&#20363;</button>
+        <button class="primary-button" id="printButton" type="button">&#25171;&#21360;&#25253;&#20215;&#21333;</button>
+      </div>
+    </header>
+    <main class="app-shell">
+      <form class="quote-form" id="quoteForm">
+        <section class="form-section">
+          <button class="section-toggle" type="button" aria-expanded="true"><span>&#22522;&#30784;&#20449;&#24687;</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+          <div class="section-body">
+            <label><span>&#25237;&#20445;&#21333;&#20301;&#21517;&#31216;</span><input name="companyName" type="text" placeholder="&#20363;&#22914;&#65306;&#23665;&#19996;&#26576;&#21046;&#36896;&#26377;&#38480;&#20844;&#21496;" /></label>
+            <label><span>&#34892;&#19994;/&#20027;&#33829;&#19994;&#21153;</span><input name="business" type="text" placeholder="&#20363;&#22914;&#65306;&#26426;&#26800;&#21152;&#24037;&#12289;&#29289;&#19994;&#26381;&#21153;" /></label>
+            <label><span>&#20445;&#38505;&#26399;&#38388;&#65288;&#26376;&#65289;</span><select name="periodMonths"></select></label>
+            <p class="field-note" id="periodRateNote">&#24403;&#21069;&#36873;&#25321;&#65306;12&#20010;&#26376;&#65292;&#25353;&#24180;&#21270;&#20445;&#36153;&#30340;100%&#35745;&#25910;&#12290;</p>
+          </div>
+        </section>
+        <section class="form-section">
+          <button class="section-toggle" type="button" aria-expanded="true"><span>&#25972;&#21333;&#31995;&#25968;</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+          <div class="section-body">
+            <label><span>&#25237;&#20445;&#20154;&#25968;&#65288;&#33258;&#21160;&#27719;&#24635;&#65289;</span><input id="totalEmployeeCount" type="number" value="0" readonly /></label>
+            <div class="field-grid">
+              <label><span>&#39640;&#40836;&#20154;&#21592;&#21344;&#27604;</span><select name="elderlyBand"></select></label>
+              <label><span>&#21382;&#21490;&#36180;&#20184;&#29575;</span><select name="lossBand"></select></label>
+            </div>
+          </div>
+        </section>
+        <section class="form-section">
+          <button class="section-toggle" type="button" aria-expanded="true"><span>&#20445;&#38556;&#26041;&#26696;</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+          <div class="section-body">
+            <div id="schemesContainer" class="schemes-container"></div>
+            <button class="ghost-button add-scheme-button" id="addSchemeButton" type="button">&#26032;&#22686;&#20445;&#38556;&#26041;&#26696;</button>
+          </div>
+        </section>
+      </form>
+      <aside class="result-panel" aria-live="polite">
+        <div class="result-card primary-result"><div><span class="result-label">&#25253;&#20215;&#32467;&#26524;</span><strong id="totalPremium">&#165;0</strong></div><span class="status-badge" id="reviewStatus">&#21487;&#21021;&#27493;&#25253;&#20215;</span></div>
+        <div class="result-card"><h2>&#20445;&#36153;&#26126;&#32454;</h2><dl class="premium-list" id="premiumList"></dl></div>
+        <div class="result-card"><h2>&#26041;&#26696;&#26126;&#32454;</h2><div class="scheme-result-list" id="schemeResultList"></div></div>
+        <div class="result-card"><h2>&#20154;&#24037;&#22797;&#26680;</h2><ul class="review-list" id="reviewList"></ul></div>
+        <div class="result-card"><h2>&#31995;&#25968;&#21475;&#24452;</h2><dl class="factor-list" id="factorList"></dl></div>
+        <div class="result-card quote-note"><h2>&#35828;&#26126;</h2><p>&#26412;&#24037;&#20855;&#20165;&#29992;&#20110;&#21021;&#27493;&#25253;&#20215;&#12290;&#25237;&#20445;&#20154;&#25968;&#31995;&#25968;&#25353;&#25152;&#26377;&#20445;&#38556;&#26041;&#26696;&#20154;&#25968;&#27719;&#24635;&#21518;&#21462;&#20540;&#65307;&#39640;&#40836;&#20154;&#21592;&#21344;&#27604;&#21644;&#21382;&#21490;&#36180;&#20184;&#29575;&#25353;&#25972;&#21333;&#19979;&#25289;&#36873;&#25321;&#21462;&#20540;&#12290;&#26368;&#32456;&#21462;&#20540;&#20197;&#26680;&#20445;&#30830;&#35748;&#21644;&#20844;&#21496;&#26377;&#25928;&#26465;&#27454;&#36153;&#29575;&#20026;&#20934;&#12290;</p></div>
+      </aside>
+    </main>
+    <div class="mobile-summary"><div><span>&#24635;&#20445;&#36153;</span><strong id="mobileTotalPremium">&#165;0</strong></div><button id="scrollResultButton" type="button">&#26597;&#30475;&#26126;&#32454;</button></div>
+    <script src="rates.js"></script><script src="calculator.js"></script><script src="app.js"></script>
+  </body>
+</html>
