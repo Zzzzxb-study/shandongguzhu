@@ -757,9 +757,14 @@ select:focus-visible {
   grid-column: 1;
 }
 
+.scheme-result-item .scheme-per-person {
+  color: var(--blue-deep);
+  font-weight: 800;
+}
+
 .scheme-result-item b {
   grid-column: 2;
-  grid-row: 1 / span 2;
+  grid-row: 1 / span 3;
   text-align: right;
   white-space: nowrap;
 }
