@@ -6,20 +6,7 @@
     <title>&#23665;&#19996;&#38599;&#20027;&#36131;&#20219;&#38505;&#25253;&#20215;&#24037;&#20855;</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="auth-locked">
-    <div class="auth-screen" id="authScreen">
-      <form class="auth-card" id="authForm">
-        <div>
-          <span class="auth-kicker">&#35775;&#38382;&#39564;&#35777;</span>
-          <h2>&#30331;&#24405;&#25253;&#20215;&#24037;&#20855;</h2>
-          <p>&#35831;&#36755;&#20837;&#37038;&#31665;&#33719;&#21462;&#39564;&#35777;&#30721;&#65292;&#39564;&#35777;&#36890;&#36807;&#21518;&#21487;&#20351;&#29992;&#25253;&#20215;&#24037;&#20855;&#12290;</p>
-        </div>
-        <label><span>&#37038;&#31665;</span><input id="authEmail" type="email" autocomplete="email" placeholder="name@example.com" required /></label>
-        <label><span>&#39564;&#35777;&#30721;</span><div class="auth-code-row"><input id="authCode" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="6 &#20301;&#25968;&#23383;" required /><button class="ghost-button" id="sendCodeButton" type="button">&#33719;&#21462;&#39564;&#35777;&#30721;</button></div></label>
-        <p class="auth-status" id="authStatus" aria-live="polite"></p>
-        <button class="primary-button" type="submit">&#30331;&#24405;</button>
-      </form>
-    </div>
+  <body>
     <header class="app-header">
       <div>
         <h1>&#23665;&#19996;&#38599;&#20027;&#36131;&#20219;&#38505;&#25253;&#20215;&#24037;&#20855;</h1>
@@ -28,7 +15,6 @@
       <div class="header-actions">
         <button class="ghost-button" id="loadSampleButton" type="button">&#22635;&#20837;&#31034;&#20363;</button>
         <button class="primary-button" id="printButton" type="button">&#25171;&#21360;&#25253;&#20215;&#21333;</button>
-        <button class="ghost-button" id="logoutButton" type="button">&#36864;&#20986;&#30331;&#24405;</button>
       </div>
     </header>
     <main class="app-shell">
@@ -70,6 +56,6 @@
       </aside>
     </main>
     <div class="mobile-summary"><div><span>&#24635;&#20445;&#36153;</span><strong id="mobileTotalPremium">&#165;0</strong></div><button id="scrollResultButton" type="button">&#26597;&#30475;&#26126;&#32454;</button></div>
-    <script src="auth.js"></script><script src="rates.js"></script><script src="calculator.js"></script><script src="app.js"></script>
+    <script src="rates.js"></script><script src="calculator.js"></script><script src="app.js"></script>
   </body>
 </html>
